@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kareem Elb7rawy</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link href="https://fonts.cdnfonts.com/css/organic-relief" rel="stylesheet">
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+
+</script>
+    
+    <link rel="icon" type="images/Logoooo.png" href="images/Logoooo.png" />
+
+</head>
+  <body>
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--big ">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+      
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <section>
+      <header>
+        <a href="#" class="brand"><code><>B7R.&lt;/&gt;</code></a>
+        <div class="menu">
+          <div class="btn">
+            <i class="fas fa-times close-btn"></i>
+          </div>
+          <a href="#" class="hoverable">Home</a>
+          <a href="#" class="hoverable">Services</a>
+          <a href="#" class="hoverable">About</a>
+          <a href="#" class="hoverable">Blog</a>
+          <a href="#" class="hoverable">Contact</a>
+          <div class="day-night-checkbox">
+            <input type="checkbox" id="day-night-checkbox">
+            <label for="day-night-checkbox"><span class="knob"></span>
+              <i></i>
+                
+              </label>
+          </div>
+      
+        </div>
+        <div class="btn">
+          <i class="fas fa-bars menu-btn"></i>
+        </div>
+      </header>
+      
+    </section>
+ 
+    <div class="container">
+     
+  <div class="infostartpage">
+    <h3 class="name-title-min">HI , I’M </h3>
+    <h1 class="name-title buzz">KAREEM <br> ELB7RAWY</h1>
+    
+    <h4>Fullstack web developer</h4>
+    <a href="" class="hoverable"><button>Contact</button></a>
+    <div class="socialmediaicons ">
+      <i class="fa-brands fa-facebook hoverable"></i>
+      <i class="fa-brands fa-instagram hoverable"></i>
+      <i class="fa-brands fa-linkedin hoverable"></i>
+      <i class="fa-brands fa-square-twitter hoverable"></i>
+    </div>
+    <i class="fa-solid fa-angles-down arrow hoverable"></i>
+  </div>
+
+      <img src="images/astronauta_dark.png" class="object ob1" data-value="-2" alt="">
+      <img src="images/planet.png" class="object ob2" data-value="6" alt="">
+      <img src="images/rocket.png" class="object ob3" data-value="4" alt="">
+      <img src="images/Vector 5.png" class="object ob4" data-value="-6" alt="">
+      <img src="images/Vector.png" class="object ob5" data-value="8" alt="">
+      <img src="images/Shape11.png" class="object ob6" data-value="-4" alt="">
+      <img src="images/Shape2.png" class="object ob7" data-value="5" alt="">
+ 
+    </div>
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    </script>
+
+
+
+
+<script type="text/javascript">
+  //javascript for navigation bar effect on scroll
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle('sticky', window.scrollY > 0);
+  });
+
+  //javascript for responsive navigation sidebar menu
+  var menu = document.querySelector('.menu');
+  var menuBtn = document.querySelector('.menu-btn');
+  var closeBtn = document.querySelector('.close-btn');
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add('active');
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove('active');
+  });
+  </script>
+
+
+<script>
+  const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('.hoverable');
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+  $hoverables[i].addEventListener('mouseenter', onMouseHover);
+  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+
+// Move the cursor
+function onMouseMove(e) {
+  TweenMax.to($bigBall, .4, {
+    x: e.pageX - 15,
+    y: e.pageY - 15 });
+
+  TweenMax.to($smallBall, .1, {
+    x: e.pageX - 5,
+    y: e.pageY - 7 });
+
+}
+
+// Hover an element
+function onMouseHover() {
+  TweenMax.to($bigBall, .3, {
+    scale: 2.5 });
+
+}
+function onMouseHoverOut() {
+  TweenMax.to($bigBall, .3, {
+    scale: 1 });
+
+}
+</script>
+
+
+ 
+
+    <!-- custom js file link  -->
+    
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> 
+  <script src="js/scriptTitle.js"></script>
+ 
+    
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

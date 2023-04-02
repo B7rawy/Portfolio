@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.cdnfonts.com/css/organic-relief');
+:root {
+    --green: #951919;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    cursor: none;
+    scroll-behavior: smooth !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    cursor: none;
+    color: white;
+}
+section {
+    padding: 2rem 9%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+ 
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .container img{
+    position: absolute;
+ 
+  }
+ .ob1{
+    width: 450px;
+    height: 300px;
+  
+    object-fit: contain;
+    position: absolute;
+    top: 260px;
+    right:  0 !important;
+    z-index: 2;
+ }
+ .ob2{
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+    top: 40px;
+    left:  150px !important;
+    z-index: 2;
+
+ }
+ .ob3{
+    width: 150px;
+    height: 150px;
+  
+    object-fit: contain;
+    position: absolute;
+    top: 250px;
+    left:  0 !important;
+    z-index: 2;
+
+ } 
+ .ob4{
+    width: 150px;
+    height: 150px;
+  
+    object-fit: contain;
+    position: absolute;
+    top: 500px;
+    left:  250px !important;
+    z-index: 2;
+    
+ } 
+ .ob5{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    top:120px;
+    right:150px !important;
+    z-index: 2;
+
+ } 
+ .ob6{
+    width: 950px;
+    height: 550px;
+  
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left:  -450px !important;
+
+ } 
+ .ob7{
+    position: absolute;
+
+    width: 950px;
+    height: 550px;
+  
+    object-fit: contain;
+    top: 0;
+    right:  -450px !important;
+ } 
+  
+  .container h2{
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 32px;
+    line-height: 60px;
+  }
+  
+  .container h2 span{
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 10px;
+  }
+  
+  @media (max-width:800px){
+    .container h2{
+      font-size: 60px;
+      letter-spacing: 19px;
+      line-height: 35px;
+    }
+  
+    .container h2 span{
+      font-size: 26px;
+    }
+  }
+
+  
+header{
+  z-index: 999;
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
+  transition: 0.6s;
+}
+
+ 
+header .brand{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 20px;
+ 
+
+  transition: 0.5s;
+  transition-property: color, background;
+}
+
+ 
+header .menu a:hover{
+    color: rgb(255, 255, 255);
+
+}
+
+header .menu a::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  header .menu a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  header .menu a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    inset: 0 0 0 0;
+    background: hsl(0, 0%, 100%);
+    z-index: -1;
+    transition: transform .3s ease;
+    height: 2px;
+   top: 25px;
+
+}
+  
+  header .menu a {
+    position: relative;
+     
+  }
+  
+  
+
+
+
+
+
+
+header .btn{
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.section-two{
+  min-height: 100vh;
+  background: #001018;
+  padding: 20px 100px;
+}
+
+.section-two h2{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.section-two p{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+@media (max-width: 1060px){
+  header .btn{
+    display: block;
+  }
+
+  header .menu{
+    position: fixed;
+    background: #14d5d5;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+    z-index: 999999;
+  }
+
+  header .menu.active{
+    right: 0;
+  }
+
+  header .menu .close-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a{
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 630px){
+  .section-main h1{
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+.day-night-checkbox {
+    width: 90px;
+    height: 35px;
+  }
+  .day-night-checkbox input {
+    display: none;
+  }
+  .day-night-checkbox label {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    border-radius: 50px;
+    background: #000000;
+    position: relative;
+    box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.3);
+  }
+  .navvv{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .day-night-checkbox .knob {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: blanchedalmond;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 59px;
+    box-shadow: inset 2px -1px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 10px 0px #ffffff;
+  }
+  .day-night-checkbox .knob:after, .day-night-checkbox .knob:before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .day-night-checkbox .knob:after {
+    width: 6px;
+    height: 9px;
+    background-color: rgba(249, 215, 165, 0.37);
+    top: 10%;
+    left: 54%;
+    transform: rotate(-35deg);
+    box-shadow: -10px 8px 0px 4px rgba(249, 215, 165, 0.37);
+  }
+  .day-night-checkbox i {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    right: 35%;
+    top: 50%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.28), -12px -16px 0 -1.2px white, 15px -20px 0 -1.5px white, 27px 0.35px 0 -2.3px white;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  .day-night-checkbox i:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    left: 29px;
+    z-index: 0;
+    top: -2px;
+    height: 1px;
+    border-radius: 1px;
+    transform: rotate(-25deg);
+    width: 23px;
+  }
+  .day-night-checkbox input:checked + label {
+    background: #00bcd4;
+  }
+  .day-night-checkbox input:checked + label .knob {
+    right: 5px;
+    background: #fbcf07;
+    box-shadow: 0 0 20px 2px white;
+    box-shadow: #ffe052 0px 0px 20px 5px;
+    box-shadow: inset -2px -1px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 20px 5px #ffe052;
+  }
+  .day-night-checkbox input:checked + label .knob:before {
+    z-index: 9999;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    top: 55%;
+    position: absolute;
+    left: -119%;
+    transform: rotate(0);
+    box-shadow: -12px -1px 0px 1px white, -9px -2px 0px 2px white, -3px -3px 0px 3px white, 2px -1.5px 0px 1.5px white, 5px -0.5px 0px 0.5px white, -6px -1.9px 0px 2px white;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .day-night-checkbox input:checked + label i {
+    animation-name: hide;
+    transform: translateY(-600%) translateX(600%);
+  }
+  
+  @keyframes example {
+    0% {
+      left: -219%;
+    }
+    100% {
+      left: 159%;
+    }
+  }
+  @keyframes show {
+    0% {
+      transform: translateY(-700%) translateX(1500%);
+    }
+    100% {
+      transform: translateY(0%) translateX(0%);
+    }
+  }
+  @keyframes hide {
+    0% {
+      transform: translateY(0%) translateX(0%);
+    }
+    100% {
+      transform: translateY(700%) translateX(-1500%);
+    }
+  }
+
+
+
+.name-title{
+    font-family: 'Organic Relief', sans-serif !important;
+    margin: 0;
+    font-size: 60px;
+
+    line-height: 1.9;
+}
+
+
+
+
+
+
+
+
+ 
+
+.buzz
+{
+	display:inline-block;
+	position:relative;
+	color:inherit;
+	text-decoration:none;
+	transition:all 250ms ease;
+	transform:translatez(0);
+	perspective:100px;
+}
+
+.buzz:before,
+.buzz:after
+{
+	content:attr( data-buzz );
+	position:absolute;
+	z-index:-1;
+	opacity:0.5;
+	transition:all 150ms ease;
+}
+
+.buzz:before
+{
+	color:#38ccc07c;
+	top:2px; left:2px;
+}
+
+.buzz:after
+{
+	color:#2869bd88;
+	bottom:2px; right:2px;
+}
+
+.buzz:hover:before
+{
+	transform:rotatex(-15deg) rotatey(5deg) scale(1.1);
+}
+
+.buzz:hover:after
+{
+	transform:rotatey(-5deg) rotatex(15deg) scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+.name-title-min{
+    font-family: 'Organic Relief', sans-serif !important;
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 5px;
+     
+}
+ 
+
+
+  body .cursor {
+    pointer-events: none;
+  }
+  body .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 10000000000;
+  }
+  body .cursor__ball circle {
+    fill: #f7f8fa;
+  }
+
+
+
+ .infostartpage{
+    text-align: center;
+    margin-top:  100px;
+ }
+ .infostartpage h4{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+ }
+ 
+ .infostartpage a button{
+    font-weight: 700;
+    color: 000;
+    background-color: white;
+    padding: 9px 30px;
+    border-radius: 8px;
+    
+ }
+ .socialmediaicons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+ }
+ .socialmediaicons i {
+    font-size: 30px;
+    color: white;
+ }
+ .arrow{
+    font-size: 30px;
+    position: relative;
+   margin-top: 50px;
+ }
