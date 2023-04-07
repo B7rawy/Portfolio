@@ -56,6 +56,7 @@ body {
   background-position: center;
   background-repeat: repeat;
   background-size: 4%;
+  
 }
 
 section {
@@ -1274,25 +1275,29 @@ border-radius: 5px;
       width: 200px;
       max-width: 408px;
       height: 100%;
-      background-color: #00c7b0;
+      background-color: #ffffff;
       position: absolute;
       left: -100px;
+      
     }
   }
   
   .swiper-slide__block .main__title {
     color: #f2f3f3;
     text-transform: uppercase;
-    font-family: Montserrat,sans-serif;
+    
     font-weight: 900;
     font-size: 2.6em;
     letter-spacing: 1px;
     margin: 0;
+    mix-blend-mode: difference;
     
   }
   
   .swiper-slide__block .main__title span {
-    color: #ff2d71;
+    color: #ffffff;
+    mix-blend-mode: difference;
+
   }
   
   @media (min-width:768px) {
@@ -1324,7 +1329,7 @@ border-radius: 5px;
   .swiper-slide__block .main__subtitle span {
     font-family: "Patua One",cursive;
     font-style: normal;
-    color: #dd1745;
+    color: #ffffff;
     letter-spacing: 1px;
   }
   
@@ -1332,6 +1337,8 @@ border-radius: 5px;
     color: #ffffff;
     z-index: 2;
     position: relative;
+    mix-blend-mode: difference;
+
   }
   
   .swiper-slide__block .paragraphe {
@@ -1461,9 +1468,21 @@ border-radius: 5px;
   }
 
 
+  .titls{
+    position: relative;
+  }
 
+.titls:after{
+    content: "";
+     position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: white;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 
-
+}
 
 
   .bottomslider{
@@ -1501,7 +1520,7 @@ border-radius: 5px;
     margin: 0;
     padding: 0;
  
-    height:300px;
+     
     mix-blend-mode: difference;
  }
  textPath{
@@ -1510,3 +1529,417 @@ border-radius: 5px;
  }
 
 
+
+
+
+
+
+ 
+
+ .try{
+    padding: 0%;
+	 
+	overflow-y: scroll;
+	color: #fff ;
+    margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+	letter-spacing: 1.2px ;
+	-webkit-font-smoothing: antialiased;
+    overflow: hidden;
+}
+
+ 
+.top, .footer{
+	 
+	height: 600px ;
+	width: 100% ;
+}
+
+.main{
+	padding: 60px ;
+	height: 400px ;
+	position: relative;
+	width: 100% ;
+}
+
+ 
+.filled-text{
+	position: absolute;
+	top: 200px ;
+	left: 100px ;
+	z-index: 1 ;
+	font-size: 100px ;
+	font-weight: 600 ;
+	
+}
+
+.outline-text {
+	position: absolute;
+	top: 200px ;
+	left: 100px ;
+	z-index: 3 ;
+	font-size: 100px ;
+	font-weight: 600 ;
+	-webkit-text-stroke-width: 4px;
+	-webkit-text-stroke-color: ghostwhite;
+	color: transparent;
+	
+}
+
+.filled-text1{
+	position: absolute;
+	top: 200px ;
+	right: 100px ;
+	z-index: 1 ;
+	font-size: 100px ;
+	font-weight: 600 ;
+	
+}
+
+.outline-text1 {
+	position: absolute;
+	top: 200px ;
+	right: 100px ;
+	z-index: 3 ;
+	font-size: 100px ;
+	font-weight: 600 ;
+	-webkit-text-stroke-width: 4px;
+	-webkit-text-stroke-color: ghostwhite;
+	color: transparent;
+	
+}
+ 
+
+.try img {
+	position: absolute;
+	top: 50px ;
+	left: 600px ;
+	z-index: 1 !important;
+	height: 400px ;
+	width: auto ;
+}
+
+
+@media (max-width: 768px) {
+    .main {
+      padding: 20px;
+      height: auto;
+    }
+    
+    .filled-text, .outline-text {
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 50px;
+    }
+    .filled-text1, .outline-text1 {
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+      }
+    
+    .try img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .top, .footer {
+      height: 300px;
+    }
+  }
+  
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.syndicatz-nft__pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.22s ease-in-out;
+    transition: opacity 0.22s ease-in-out;
+    background-image: url(https://syndicatz.io/wp-content/themes/syndicatz-theme/assets/images/card-pattern.webp), url(https://syndicatz.io/wp-content/themes/syndicatz-theme/assets/images/card-pattern.webp), url(https://syndicatz.io/wp-content/themes/syndicatz-theme/assets/images/card-pattern.webp), repeating-linear-gradient(82deg, #da3832 calc(80px * 1), #dbcc56 calc(80px * 2), #79c73a calc(80px * 3), #3ac0b7 calc(80px * 4), #4762cf calc(80px * 5), #aa45d1 calc(80px * 6), #da3832 calc(80px * 10)), radial-gradient(farthest-corner circle at var(--x) var(--y), rgba(255, 255, 255, 0.6) 5%, rgba(150, 150, 150, 0.3) 40%, black 100%);
+    --x: 50%;
+    --y: 50%;
+    --posx: 50%;
+    --posy: 50%;
+    z-index: 19;
+    border-radius: 10px;
+    background-blend-mode: color-dodge, color-burn, saturation, screen;
+    background-position: 50%, 50%, 50%, calc(175% - var(--posx)*2.5) calc(175% - var(--posy)*2.5), 50%;
+    background-size: cover, cover, cover, 600% 1200%, cover;
+    -webkit-filter: brightness(0.75) contrast(1.2) saturate(1.5);
+    filter: brightness(0.75) contrast(1.2) saturate(1.5);
+    mix-blend-mode: color-dodge;
+  }
+  
+ 
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 200px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cards-right {
+    margin-top: 200px;
+  }
+  
+  .card-wrapper {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    transform: scale(0.77);
+    margin-bottom: 60px;
+  }
+  
+  .card-blur {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: blur(50px);
+    z-index: -1;
+    opacity: 0.25;
+    top: 30px;
+    left: 30px;
+    display: block;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 35px 35px 30px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    user-select: none;
+  }
+  .card:hover .card-image {
+    transform: scale(1.13) translateY(-25px);
+  }
+  .card:hover .card-image img {
+    border-radius: 30px;
+  }
+  .card:hover .card-image:before {
+    transform: scale(1.05) translateY(-5px);
+    opacity: 0.55;
+    filter: blur(30px);
+  }
+  .card:hover .card-image:after {
+    border-radius: 30px;
+  }
+  
+  .card-video:hover .card-image {
+    transform: scale(1.125) translateY(-15px);
+  }
+  .card-image {
+    border-radius: 15px;
+    position: relative;
+    transform: translateZ(50px);
+    -webkit-perspective: 1000;
+    transition: 0.45s ease all;
+  }
+  .card-image:after {
+    background-image: url(http://sebastianpetrovski.com/wp-content/uploads/2017/12/Blog-BG-Noise.gif);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0.28;
+    border-radius: 20px;
+  }
+  .card-image:before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: #000;
+    filter: blur(40px);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    opacity: 0.4;
+    transition: 0.3s ease all;
+  }
+  .card-image img {
+    display: block;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease all;
+  }
+  
+  .card-header {
+    display: flex;
+  }
+  
+  .card-title {
+    font-size: 42px;
+    font-weight: 600;
+  }
+  
+  .card-author {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 26px;
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+  }
+  
+  .card-header-rating-wrap {
+    text-align: right;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  
+  .card-total-rating {
+    font-size: 42px;
+    font-weight: 700;
+  }
+  
+  .card-summary-rating {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 9px;
+    color: #5676EA;
+  }
+  .card-summary-rating span:not(:last-child) {
+    margin-right: 9px;
+  }
+  .card-summary-rating span:nth-child(5) {
+    color: #A050DE;
+  }
+  .card-summary-rating span:nth-child(6) {
+    color: #DA2264;
+  }
+  
+  .card-header {
+    padding-top: 30px;
+  }
+  
+  .card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 28px;
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-footer-logo {
+    margin-left: auto;
+  }
+  .card-footer-logo a button{
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 8px;
+  }
+  .logo-rzt {
+    width: 130px;
+    opacity: 0.2;
+    position: relative;
+    top: 4px;
+    left: 4px;
+  }
+  
+  .card-footer-nominee {
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+  }
+  .card-footer-nominee:before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    opacity: 0.6;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    margin-top: -4px;
+  }
+  
+  .card-nominee {
+    font-size: 22px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+  }
+  
+  .card-month {
+    font-size: 16px;
+    opacity: 0.4;
+    letter-spacing: -1px;
+    font-weight: 500;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .cards {
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+    }
+    
+    .cards-right {
+    margin-top: 100px;
+    }
+    
+    .card-wrapper {
+    width: 100%;
+    transform: scale(1);
+    margin-bottom: 40px;
+    }
+    
+    .card-blur {
+    top: 15px;
+    left: 15px;
+    }
+    
+    .card:hover .card-image {
+    transform: scale(1.1) translateY(-15px);
+    }
+    
+    .card-video:hover .card-image {
+    transform: scale(1.1) translateY(-10px);
+    }
+    }
+    #wrapper{
+        padding: 0;
+      }

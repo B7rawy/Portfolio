@@ -526,33 +526,150 @@ function getEyeWithSomethingInIt() {
 
 
 
-console.clear();
+var textPaths = document.querySelectorAll('textPath');
 
-var textPath = document.querySelector('#text-path');
+textPaths.forEach(function(textPath) {
+  var path = document.querySelector(textPath.getAttribute('href'));
+  var pathLength = path.getTotalLength();
 
-var textContainer = document.querySelector('#text-container');
+  function updateTextPathOffset(offset){
+    textPath.setAttribute('startOffset', offset); 
+  }
 
-var path = document.querySelector( textPath.getAttribute('href') );
+  updateTextPathOffset(pathLength);
 
-var pathLength = path.getTotalLength();
-console.log(pathLength);
+  function onScroll(){
+    requestAnimationFrame(function(){
+      var rect = textPath.getBoundingClientRect();
+      var scrollPercent = rect.y / window.innerHeight;
+      updateTextPathOffset( scrollPercent * pathLength );
+    });
+  }
 
-function updateTextPathOffset(offset){
-  textPath.setAttribute('startOffset', offset); 
-}
+  window.addEventListener('scroll',onScroll);
+});
 
-updateTextPathOffset(pathLength);
+ 
 
-function onScroll(){
-  requestAnimationFrame(function(){
-    var rect = textContainer.getBoundingClientRect();
-    var scrollPercent = rect.y / window.innerHeight;
-    console.log(scrollPercent);
-    updateTextPathOffset( scrollPercent * 1 * pathLength );
+
+
+
+
+
+// Smothe scrollee
+// Smothe scrollee
+// Smothe scrollee
+// Smothe scrollee
+// Smothe scrollee
+
+function init() {
+    new SmoothScroll(document, 120, 10);
+  }
+  
+  function SmoothScroll(target, speed, smooth) {
+    if (target === document)
+      target =
+        document.scrollingElement ||
+        document.documentElement ||
+        document.body.parentNode ||
+        document.body; // cross browser support for document scrolling
+  
+    var moving = false;
+    var pos = target.scrollTop;
+    var frame =
+      target === document.body && document.documentElement
+        ? document.documentElement
+        : target; // safari is the new IE
+  
+    target.addEventListener("mousewheel", scrolled, { passive: false });
+    target.addEventListener("DOMMouseScroll", scrolled, { passive: false });
+  
+    function scrolled(e) {
+      e.preventDefault(); // disable default scrolling
+  
+      var delta = normalizeWheelDelta(e);
+  
+      pos += -delta * speed;
+      pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)); // limit scrolling
+  
+      if (!moving) update();
+    }
+  
+    function normalizeWheelDelta(e) {
+      if (e.detail) {
+        if (e.wheelDelta)
+          return (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1);
+        // Opera
+        else return -e.detail / 3; // Firefox
+      } else return e.wheelDelta / 120; // IE,Safari,Chrome
+    }
+  
+    function update() {
+      moving = true;
+  
+      var delta = (pos - target.scrollTop) / smooth;
+  
+      target.scrollTop += delta;
+  
+      if (Math.abs(delta) > 0.5) requestFrame(update);
+      else moving = false;
+    }
+  
+    var requestFrame = (function () {
+      // requestAnimationFrame cross browser
+      return (
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (func) {
+          window.setTimeout(func, 1000 / 50);
+        }
+      );
+    })();
+  }
+  
+  window.addEventListener("DOMContentLoaded", init);
+
+
+
+
+
+
+
+
+// Let's Play Poxes Move With mouse
+// Let's Play Poxes Move With mouse
+// Let's Play Poxes Move With mouse
+// Let's Play Poxes Move With mouse
+// Let's Play Poxes Move With mouse
+
+
+
+  const cardWrapper = document.querySelectorAll('.card-wrapper');
+  const speed = 0.06;
+  
+  cardWrapper.forEach((wrapper) => {
+    const card = wrapper.querySelector('.card');
+    const rect = card.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 4;
+    const centerY = rect.top + rect.height / 4;
+  
+    wrapper.addEventListener('mousemove', (event) => {
+      const x = (event.clientX - centerX) * speed;
+      const y = (event.clientY - centerY) * speed;
+      card.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    
+    wrapper.addEventListener('mouseleave', () => {
+      card.style.transform = `translate(0px, 0px)`;
+    });
   });
-}
-
-window.addEventListener('scroll',onScroll);
 
 
-alert("Hello! I am an alert box!!");
+
+
+
+
+  
