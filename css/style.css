@@ -70,14 +70,28 @@ section {
 .container {
     position: relative;
     width: 100%;
-    height: calc(100px - 100%);
-    min-height: calc(100vh - 100px);
+    height: 100%;
+ 
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     overflow: hidden;
  
+}
+
+
+.container2 {
+  position: relative;
+  width: 100%;
+  height: calc(100px - 100%);
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+
 }
 
 
@@ -1519,9 +1533,8 @@ border-radius: 5px;
     width: 100%;
     margin: 0;
     padding: 0;
- 
-     
     mix-blend-mode: difference;
+    height: 230px;
  }
  textPath{
     font-family: 'Organic Relief', sans-serif !important;
@@ -2070,12 +2083,7 @@ color: #FFFFFF;
       padding: 10px 20px;
      
     }
-    .planetsec3{
-      width: 300px;
-      position: absolute;
-      left: 0;
-      bottom: 60px;
-    }
+ 
 
     .planetsec5{
       width: 100px;
@@ -2240,7 +2248,7 @@ max-width: 400px;
 
 
   .finalycontainer{
-    padding: 2rem 9%;
+    padding:  0 9%;
 
     width: 100%;
     display: flex;
@@ -2318,4 +2326,31 @@ font-size: 20px;
   .colsitmss{
     
     
+  }
+
+  @media (max-width: 700px){
+
+
+
+
+    .finalmediacontainer img{
+     
+      display: none;
+     
+    }
+        .h1:after{
+          display: none;
+
+        }
+        .finalmediacontainer{
+          width: 0;
+        }
+        .finaltextcontainer{
+          width: 100%;
+      
+        }
+        .bottom-cols .col{
+          text-align: center;
+          align-items: center;
+        }
   }
