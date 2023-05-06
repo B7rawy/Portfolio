@@ -1943,3 +1943,296 @@ border-radius: 5px;
     #wrapper{
         padding: 0;
       }
+
+
+
+      
+    .servicecontent{
+     width: 100%;
+     margin: auto;
+     margin-top: 50px;
+ 
+     display: flex;
+     justify-content: space-between;
+    
+    }
+  
+      .cupescontainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .serviecol
+    {
+      width: 200px;
+      height: 200px;
+      /* background: linear-gradient(180deg, rgba(92, 210, 185, 0) 0%, rgba(92, 210, 185, 0.4) 100%); */
+      background-color:#1A1818 ;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .serviecol h1{
+      font-weight: 600;
+      font-size: 20px;
+      margin:10px;
+     
+  
+  
+
+     
+      color: #FFFFFF;
+      
+      
+    }
+    
+    .serviecol p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+     
+      /* or 26px */
+      
+      display: flex;
+      align-items: center;
+      text-align: center;
+      
+      color: rgba(255, 255, 255, 0.76);
+      
+    }
+    .bggren{
+      background: linear-gradient(180deg, rgba(92, 210, 185, 0) 0%, rgba(92, 210, 185, 0.4) 100%);
+
+    }
+    .serviecol img{
+      width: 80px;
+    }
+    
+    .textcontainer{
+    align-items: center;
+      height: auto;
+      width: 40%;
+      
+    }
+    .textcontainer h4{
+      font-family: 'Cairo';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      /* identical to box height */
+      
+      display: flex;
+      align-items: center;
+      
+      color: #5CD2B9;
+    }
+    .textcontainer h1{
+
+      font-family: 'Cairo';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 70px;
+      margin: 0;
+      color: #FFFFFF;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .textcontainer h1:after{
+      content: "";
+      width: 150px;
+      height: 3px;
+      position: absolute;
+      background-color: #5CD2B9;
+      bottom: 0;
+      left: 0;
+      
+    }
+    .greenc{
+      color:#5CD2B9 ;
+    }
+    .textcontainer p{
+      font-family: 'Cairo';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      color: #D0CECE;
+      margin-bottom: 50px;
+      line-height: 1.5;
+     
+    }
+    .textcontainer a{
+font-size: 20px;
+color: #FFFFFF;
+      background-color: #5CD2B9;
+      padding: 10px 20px;
+     
+    }
+    .planetsec3{
+      width: 300px;
+      position: absolute;
+      left: 0;
+      bottom: 60px;
+    }
+
+    .planetsec5{
+      width: 100px;
+      position: absolute;
+      right:  0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+
+    @media (max-width: 911px){
+
+      .servicecontent{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .textcontainer{
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      .cupescontainer{
+        width: 100%;
+      }
+      .planetsec3{
+        display: none;
+      }
+      .planetsec5{
+        display: none;
+      }
+      .planetsec4{
+        display: none;
+      }
+   
+    }
+    
+    @media (max-width: 500px){
+      .cupescontainer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+      }
+      .serviecol
+      {
+        width: 300px;
+        height: 300px;
+        /* background: linear-gradient(180deg, rgba(92, 210, 185, 0) 0%, rgba(92, 210, 185, 0.4) 100%); */
+        background-color:#1A1818 ;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+      }
+    }
+
+
+
+
+
+
+
+    
+.aboutcontainer{
+  
+  width: 100%;
+  height: 100%;
+}
+
+
+  .aboutconainerholder{
+
+  }
+  .aboutconainerholder >h4{
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #5CD2B9;
+  }
+  .aboutconainerholder >h1{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    margin: 0;
+    color: #FFFFFF;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .aboutconainerholder >h1:after{
+    content: "";
+    width: 150px;
+    height: 3px;
+    position: absolute;
+    background-color: #5CD2B9;
+    bottom: 0;
+    left: 0;
+    
+  }
+  .aboutconainerholder >p{
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #D0CECE;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    max-width: 800px;
+  }
+  .aboutconainerholder .aboutcol{
+    display: flex;
+    
+   flex-direction: column;
+  }
+  .colaboutsingl{
+    display: flex;
+    align-items: center;
+  }
+  .colaboutsingl:nth-last-child(2){
+    margin-bottom: 40px;
+
+  }
+  .aboutconainerholder .aboutcol img{
+     width: 120px;
+     margin-right: 30px;
+  }
+  .aboutconainerholder .aboutcol .aboutcoltext{
+
+  }
+  .aboutconainerholder .aboutcol .aboutcoltext h1{
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .aboutconainerholder .aboutcol .aboutcoltext p{
+    
+font-family: 'Cairo';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+ 
+display: flex;
+align-items: center;
+
+color: rgba(208, 206, 206, 0.73);
+max-width: 400px;
+  }
+
+.planetsec4{
+    width: 300px;
+    position: absolute;
+    right:  0;
+    bottom:  200px;
+  }
