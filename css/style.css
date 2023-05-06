@@ -2236,3 +2236,86 @@ max-width: 400px;
     right:  0;
     bottom:  200px;
   }
+
+
+
+  .finalycontainer{
+    padding: 2rem 9%;
+
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  .h1{
+    width: 100%;
+  }
+  .h1:after{
+    content: "";
+     
+
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    right: -200px;
+    
+    background: linear-gradient(180deg, rgba(47, 157, 136, 0.66) 0%, rgba(52, 98, 89, 0.12) 71.35%, rgba(52, 98, 89, 0) 100%);
+    border-radius: 81px;
+    transform: rotate(79.04deg);
+  }
+  .finaltextcontainer{
+    width: 60%;
+     
+
+  }
+  .finaltextcontainer h4{
+
+  }
+  .finaltextcontainer h1{
+    font-size: 90px;
+    margin: 0;
+  }
+  .finaltextcontainer p{
+    
+  }
+  .finalmediacontainer{
+    width: 40%;
+   
+  }
+  .finalmediacontainer img{
+    max-width: 100%;
+    padding-top: 100px;
+  }
+
+  .finalyitemscontainer{
+    padding: 30px 0;
+  }
+  .finalcolholder{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .finalcolholder img{
+    margin: 10px 0;
+  }
+  .finalycol{
+  display: flex;
+  align-items: center;
+  }
+  .finalycol img{
+width: 80px;
+margin: 10px;
+  }
+  .finalycoltext {
+
+  }
+  .finalycoltext h1{
+font-size: 30px;
+  }
+  .finalycoltext p {
+font-size: 20px;
+  }
+  .colsitmss{
+    
+    
+  }
